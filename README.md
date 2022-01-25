@@ -1,1 +1,1 @@
-![Metrics](https://github.com/chrisdigity/chrisdigity/blob/main/github-metrics.svg)
+<img width="100%" src="https://metrics.lecoq.io/chrisdigity">
