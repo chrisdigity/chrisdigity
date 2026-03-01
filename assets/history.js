@@ -3,58 +3,46 @@ window.HISTORY_DATA = [
     "title": "Senior Programmer",
     "start": 2021,
     "end": 2025,
-    "summary": "Primary systems engineer for a quantum resistant distributed ledger protocol, leading full stack platform modernization, C based node architecture, public API services, and globally distributed infrastructure supporting a distributed consensus system.",
+    "summary": "Led systems engineering for a quantum resistant distributed ledger system: C based node architecture, public API services, and globally distributed infrastructure supporting a distributed consensus network.",
     "sections": [
       {
         "heading": "Frontend and Platform Modernization (React / Web Infrastructure)",
         "bullets": [
-          "Replaced legacy website with a modern React based implementation",
-          "Implemented version controlled frontend development with automated production deployment",
-          "Deployed static frontend via Cloudflare Pages on a globally distributed edge network",
-          "Improved maintainability by organizing frontend into reusable components",
-          "Supported ongoing frontend updates and production releases"
+          "Rebuilt legacy website as a React based implementation; improved maintainability via reusable components",
+          "Implemented version controlled workflow and CI/CD for automated production deployments and releases",
+          "Deployed static frontend via Cloudflare Pages on a globally distributed edge network"
         ]
       },
       {
         "heading": "Distributed Consensus Node and Systems Engineering (C / CUDA)",
         "bullets": [
-          "Re architected legacy C based node software to improve modularity, testability, and long term maintainability",
-          "Refactored monolithic logic into modular components enabling deterministic unit testing",
-          "Designed and implemented portable Unix compatible Make based build system",
-          "Led major distributed protocol upgrades improving operational stability and network usability",
-          "Optimized performance critical proof of work algorithm components using CUDA acceleration",
-          "Improved node reliability to 99.8 percent uptime across globally distributed infrastructure",
-          "Led implementation of architecture and protocol decisions in collaboration with technical leadership",
-          "Integrated automated continuous integration workflows using GitHub Actions",
-          "Managed versioned releases and coordinated deployments via GitHub"
+          "Re architected legacy C based node software into modular, testable components; enabled deterministic unit testing",
+          "Designed a portable Unix compatible Make based build; integrated GitHub Actions CI and managed versioned releases",
+          "Led protocol and architecture upgrades improving operational stability and network usability",
+          "Optimized performance critical proof of work algorithm components using CUDA acceleration"
         ]
       },
       {
         "heading": "Backend and Real Time API Architecture (Node.js / Golang / MySQL)",
         "bullets": [
-          "Architected public REST API layer serving relational ledger data backed by MySQL",
-          "Implemented real time ledger event propagation using WebSockets",
-          "Built and maintained Node.js backend services on Ubuntu LTS with systemd managed non root isolation",
-          "Sustained approximately 300k origin requests and 10k load balanced API requests per day",
-          "Achieved 99.98 percent uptime at load balancer level and 99.9 percent across independent API nodes"
+          "Architected public REST API layer serving relational ledger data backed by MySQL, plus real-time WebSocket event propagation",
+          "Built and maintained Node.js backend services on Ubuntu LTS using systemd managed non-root isolation",
+          "Sustained approximately 300k origin requests per day and 10k load balanced API requests per day"
         ]
       },
       {
         "heading": "Infrastructure, Reliability, and Cost Strategy",
         "bullets": [
-          "Architected cost efficient multi region VPS infrastructure strategy avoiding hyperscaler lock in",
-          "Implemented geographic redundancy across three globally distributed API servers",
-          "Replaced third party SaaS TCP and HTTP monitoring with self hosted observability and alerting systems",
-          "Reduced infrastructure costs by over 80 percent while improving reliability",
-          "Reduced multi hour outages to minutes through improved monitoring, automation, and failover design"
+          "Architected cost efficient multi region VPS infrastructure avoiding hyperscaler lock in; implemented redundancy across three globally distributed API servers",
+          "Replaced third party SaaS TCP/HTTP monitoring with self hosted observability and alerting; reduced multi hour outages to minutes via automation and failover",
+          "Reduced infrastructure costs by over 80 percent while improving reliability"
         ]
       },
       {
         "heading": "Technical Leadership and Cross Stack Oversight",
         "bullets": [
-          "Reviewed and advised on supporting services written in Golang, PHP (Laravel), and TypeScript",
-          "Operated as de facto technical lead, translating high level upgrade objectives into secure, production ready implementations without formal product management",
-          "Provided architectural guidance across frontend, backend, and infrastructure domains"
+          "Operated as de facto technical lead across frontend, backend, and infrastructure; translated objectives into secure, production ready implementations",
+          "Reviewed and advised on supporting services written in Golang, PHP (Laravel), and TypeScript; partnered with leadership on architectural decisions"
         ]
       }
     ]
@@ -112,6 +100,34 @@ window.HISTORY_DATA = [
           "Assisted qualified maintainers with complex jobs and fault investigations on electrical systems",
           "Developed fault finding capability and progressively took ownership of troubleshooting tasks with supervisor approval",
           "Built practical experience reading schematics, using test equipment, and following safety critical procedures"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Personal Projects",
+    "start": 0,
+    "end": 0,
+    "meta": "Ongoing",
+    "open": true,
+    "summary": "",
+    "sections": [
+      {
+        "heading": "Video Editing (DaVinci Resolve)",
+        "bullets": [
+          "Created YouTube videos of camping adventures around Australia using a drone and a GoPro, and a co-op gaming series focused on tackling difficult content with a smaller group."
+        ]
+      },
+      {
+        "heading": "PC Building & Hardware Diagnostics",
+        "bullets": [
+          "Selecting components, assembly, and diagnosing hardware/software issues from first boot through stability."
+        ]
+      },
+      {
+        "heading": "Public Discord Bot",
+        "bullets": [
+          "Built and hosted a Discord bot that announces who joins online chats, improving awareness and coordination for voice sessions."
         ]
       }
     ]

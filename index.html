@@ -10,20 +10,15 @@
 
 <header id="personal"></header>
 <main id="history"></main>
-<section id="projects"></section>
 
 <script src="assets/personal.js"></script>
 <script src="assets/history.js"></script>
 <script>
 const personal = window.PERSONAL_DATA || {};
 const history = Array.isArray(window.HISTORY_DATA) ? [...window.HISTORY_DATA] : [];
-const projects = Array.isArray(personal.projects)
-  ? personal.projects
-  : (Array.isArray(window.PROJECTS_DATA) ? window.PROJECTS_DATA : []);
 
 const container = document.getElementById('history');
 const header = document.getElementById('personal');
-const projectsContainer = document.getElementById('projects');
 const currentPageUrl = window.location.href;
 
 const links = Array.isArray(personal.links) ? personal.links : [];
@@ -38,42 +33,19 @@ header.innerHTML = `
   <p class="links">${linksHtml}</p>
 `;
 
-if (projectsContainer && projects.length) {
-  projectsContainer.innerHTML = `
-    <h2 class="section-title">Personal Projects</h2>
-    ${projects
-      .map(
-        (project) => `
-          <div class="project">
-            <h3 class="project-title">${project.title || ''}</h3>
-            ${project.summary ? `<p class="project-summary">${project.summary}</p>` : ''}
-            ${Array.isArray(project.bullets) && project.bullets.length
-              ? `
-                <ul>
-                  ${project.bullets.map((b) => `<li>${b}</li>`).join('')}
-                </ul>
-              `
-              : ''}
-          </div>
-        `
-      )
-      .join('')}
-  `;
-}
-
 history.sort((a, b) => b.start - a.start);
 history.forEach((role, index) => {
   const details = document.createElement('details');
   details.className = "role";
 
-  if (index === 0) {
+  if (role.open || index === 0) {
     details.open = true;
   }
 
   details.innerHTML = `
     <summary class="role-summary" data-print-url="${currentPageUrl}">
       <h2 class="role-title">${role.title}</h2>
-      <p class="meta">${role.start} - ${role.end}</p>
+      <p class="meta">${role.meta ? role.meta : `${role.start} - ${role.end}`}</p>
       <p class="summary">${role.summary}</p>
     </summary>
     ${role.sections.map(s => `

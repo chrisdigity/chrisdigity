@@ -10,29 +10,6 @@ header {
   margin-bottom: 40px;
 }
 
-#projects {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  margin: 0 0 15px 0;
-}
-
-.project {
-  margin-top: 20px;
-}
-
-.project-title {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.project-summary {
-  margin: 0 0 5px 0;
-}
-
 h1 {
   margin-bottom: 5px;
 }
@@ -58,14 +35,13 @@ header p {
 }
 
 .role {
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
 .role-summary {
   cursor: pointer;
   position: relative;
   list-style-position: outside;
-  padding-bottom: 12px;
 }
 
 .role-summary::-webkit-details-marker {
