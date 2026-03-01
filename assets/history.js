@@ -8,7 +8,7 @@ window.HISTORY_DATA = [
       {
         "heading": "Frontend and Platform Modernization (React / Web Infrastructure)",
         "bullets": [
-          "Replaced legacy company website with a modern React based implementation",
+          "Replaced legacy website with a modern React based implementation",
           "Implemented version controlled frontend development with automated production deployment",
           "Deployed static frontend via Cloudflare Pages on a globally distributed edge network",
           "Improved maintainability by organizing frontend into reusable components",
