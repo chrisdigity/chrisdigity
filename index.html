@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curriculum Vitae</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/print.css" media="print">
+</head>
+<body>
+
+<header id="personal"></header>
+<main id="history"></main>
+
+<script src="assets/personal.js"></script>
+<script src="assets/history.js"></script>
+<script>
+const personal = window.PERSONAL_DATA || {};
+const history = Array.isArray(window.HISTORY_DATA) ? [...window.HISTORY_DATA] : [];
+
+const container = document.getElementById('history');
+const header = document.getElementById('personal');
+const currentPageUrl = window.location.href;
+
+const links = Array.isArray(personal.links) ? personal.links : [];
+const linksHtml = links
+  .map(link => `<a href="${link.url}">${link.url}</a>`)
+  .join('<br/>');
+
+header.innerHTML = `
+  <h1>${personal.name || ''}</h1>
+  <p class="tagline">${personal.tagline || ''}</p>
+  <p class="highlights">${personal.highlights || ''}</p>
+  <p class="links">${linksHtml}</p>
+`;
+
+history.sort((a, b) => b.start - a.start);
+history.forEach((role, index) => {
+  const details = document.createElement('details');
+  details.className = "role";
+
+  if (index === 0) {
+    details.open = true;
+  }
+
+  details.innerHTML = `
+    <summary class="role-summary" data-print-url="${currentPageUrl}">
+      <h2 class="role-title">${role.title}</h2>
+      <p class="meta">${role.start} - ${role.end}</p>
+      <p class="summary">${role.summary}</p>
+    </summary>
+    ${role.sections.map(s => `
+      <div class="subsection">
+        <h3>${s.heading}</h3>
+        <ul>
+          ${s.bullets.map(b => `<li>${b}</li>`).join('')}
+        </ul>
+      </div>
+    `).join('')}
+  `;
+
+  container.appendChild(details);
+});
+</script>
+
+</body>
+</html>
